@@ -38,7 +38,7 @@ export function HeroSection() {
               View Live Dashboard
             </Button>
           </Link>
-          <Link href="/voice">
+          <Link href="/dashboard">
             <Button
               size="lg"
               variant="outline"

@@ -5,7 +5,6 @@ import {
   Navigation,
   BrainCircuit,
   Container,
-  Mic,
   BellRing,
 } from "lucide-react";
 import { GlassCard } from "@/components/glass-card";
@@ -32,13 +31,7 @@ const features = [
       "IoT-enabled tracking for temperature, humidity, and location of every container across your port yards.",
     href: "/dashboard",
   },
-  {
-    icon: Mic,
-    title: "Voice-Based Shipment Status",
-    description:
-      "Call our AI voice bot for instant shipment updates. Natural language processing delivers data hands-free.",
-    href: "/voice",
-  },
+
   {
     icon: BellRing,
     title: "Intelligent Alerts System",

@@ -7,7 +7,7 @@ import {
   Cloud,
   BrainCircuit,
   LayoutDashboard,
-  Mic,
+  BotMessageSquare,
   BellRing,
   ArrowDown,
   ArrowLeft,
@@ -55,10 +55,10 @@ const outputs = [
     href: "/dashboard",
   },
   {
-    icon: Mic,
-    title: "Voice Bot",
-    description: "Natural language voice interface for hands-free updates.",
-    href: "/voice",
+    icon: BotMessageSquare,
+    title: "PORT-AI Chat",
+    description: "Intelligent AI chat assistant for real-time port operations.",
+    href: "/port-ai",
   },
   {
     icon: BellRing,

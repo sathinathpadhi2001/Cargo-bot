@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, BarChart3, Mic, Radio } from "lucide-react";
+import { ArrowRight, BarChart3, Radio } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function CTASection() {
@@ -14,11 +14,10 @@ export function CTASection() {
         </h2>
         <p className="mx-auto mb-10 max-w-lg text-muted-foreground text-pretty">
           Explore every feature of the platform. Navigate between the live
-          dashboard, voice AI assistant, system architecture, and detailed
-          analytics.
+          dashboard, system architecture, and detailed analytics.
         </p>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <Link href="/dashboard" className="group">
             <div className="flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-neon/30 hover:shadow-[0_0_25px_rgba(0,212,255,0.1)]">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neon/10 transition-colors group-hover:bg-neon/20">
@@ -29,15 +28,7 @@ export function CTASection() {
             </div>
           </Link>
 
-          <Link href="/voice" className="group">
-            <div className="flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-neon/30 hover:shadow-[0_0_25px_rgba(0,212,255,0.1)]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neon/10 transition-colors group-hover:bg-neon/20">
-                <Mic className="h-6 w-6 text-neon" />
-              </div>
-              <span className="text-sm font-semibold text-foreground">Voice AI Demo</span>
-              <span className="text-xs text-muted-foreground">Try the assistant</span>
-            </div>
-          </Link>
+
 
           <Link href="/architecture" className="group">
             <div className="flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-neon/30 hover:shadow-[0_0_25px_rgba(0,212,255,0.1)]">

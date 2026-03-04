@@ -6,7 +6,6 @@ import {
   Anchor,
   LayoutDashboard,
   BrainCircuit,
-  Mic,
   BarChart3,
   ChevronLeft,
   ChevronRight,
@@ -21,7 +20,7 @@ const navItems = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { label: "PORT-AI", href: "/port-ai", icon: BotMessageSquare },
   { label: "Architecture", href: "/architecture", icon: BrainCircuit },
-  { label: "Voice AI", href: "/voice", icon: Mic },
+
   { label: "Analytics", href: "/analytics", icon: BarChart3 },
 ];
 

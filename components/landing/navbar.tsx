@@ -33,9 +33,7 @@ export function LandingNavbar() {
           <Link href="/analytics" className="text-sm text-muted-foreground transition-colors hover:text-neon">
             Analytics
           </Link>
-          <Link href="/voice" className="text-sm text-muted-foreground transition-colors hover:text-neon">
-            Voice AI
-          </Link>
+
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
@@ -44,7 +42,7 @@ export function LandingNavbar() {
               View Live Dashboard
             </Button>
           </Link>
-          <Link href="/voice">
+          <Link href="/dashboard">
             <Button className="bg-neon text-primary-foreground hover:bg-neon/90 neon-glow">
               Request Demo
             </Button>
@@ -75,15 +73,13 @@ export function LandingNavbar() {
             <Link href="/analytics" className="text-sm text-muted-foreground hover:text-neon" onClick={() => setMobileOpen(false)}>
               Analytics
             </Link>
-            <Link href="/voice" className="text-sm text-muted-foreground hover:text-neon" onClick={() => setMobileOpen(false)}>
-              Voice AI
-            </Link>
+
             <Link href="/dashboard" onClick={() => setMobileOpen(false)}>
               <Button variant="outline" className="w-full border-neon/30 text-neon hover:bg-neon/10">
                 View Live Dashboard
               </Button>
             </Link>
-            <Link href="/voice" onClick={() => setMobileOpen(false)}>
+            <Link href="/dashboard" onClick={() => setMobileOpen(false)}>
               <Button className="w-full bg-neon text-primary-foreground hover:bg-neon/90">
                 Request Demo
               </Button>

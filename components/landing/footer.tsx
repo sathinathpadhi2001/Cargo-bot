@@ -25,9 +25,7 @@ export function Footer() {
             <Link href="/analytics" className="text-sm text-muted-foreground hover:text-neon transition-colors">
               Analytics
             </Link>
-            <Link href="/voice" className="text-sm text-muted-foreground hover:text-neon transition-colors">
-              Voice AI
-            </Link>
+
           </div>
 
           <p className="text-sm text-muted-foreground">
