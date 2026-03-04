@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import React from "react";
 import {
   Container,
   Thermometer,
@@ -40,8 +41,8 @@ export function ContainerTable() {
       : filter === "alert"
         ? containers.filter((c) => c.riskAlert)
         : containers.filter(
-            (c) => c.status.toLowerCase() === filter
-          );
+          (c) => c.status.toLowerCase() === filter
+        );
 
   return (
     <GlassCard neon className="col-span-full">
@@ -57,11 +58,10 @@ export function ContainerTable() {
             <button
               key={f}
               onClick={() => setFilter(f)}
-              className={`rounded-full px-3 py-1 text-xs font-medium capitalize transition-colors ${
-                filter === f
+              className={`rounded-full px-3 py-1 text-xs font-medium capitalize transition-colors ${filter === f
                   ? "bg-neon/20 text-neon border border-neon/30"
                   : "bg-secondary text-muted-foreground hover:text-foreground border border-border"
-              }`}
+                }`}
             >
               {f}
               {f === "alert" &&
@@ -104,15 +104,13 @@ export function ContainerTable() {
                 container.temperature > container.threshold;
               const isExpanded = expandedId === container.id;
               return (
-                <>
+                <React.Fragment key={container.id}>
                   <tr
-                    key={container.id}
                     onClick={() =>
                       setExpandedId(isExpanded ? null : container.id)
                     }
-                    className={`cursor-pointer border-b border-border/50 transition-colors hover:bg-secondary/30 ${
-                      isExpanded ? "bg-secondary/20" : ""
-                    }`}
+                    className={`cursor-pointer border-b border-border/50 transition-colors hover:bg-secondary/30 ${isExpanded ? "bg-secondary/20" : ""
+                      }`}
                   >
                     <td className="py-3 font-mono text-sm text-neon">
                       {container.id}
@@ -122,18 +120,16 @@ export function ContainerTable() {
                     </td>
                     <td className="py-3">
                       <span
-                        className={`flex items-center gap-1 font-mono ${
-                          overThreshold
+                        className={`flex items-center gap-1 font-mono ${overThreshold
                             ? "font-bold text-destructive"
                             : "text-foreground"
-                        }`}
+                          }`}
                       >
                         <Thermometer
-                          className={`h-3 w-3 ${
-                            overThreshold
+                          className={`h-3 w-3 ${overThreshold
                               ? "text-destructive"
                               : "text-muted-foreground"
-                          }`}
+                            }`}
                         />
                         {container.temperature}°C
                       </span>
@@ -143,13 +139,12 @@ export function ContainerTable() {
                     </td>
                     <td className="py-3">
                       <span
-                        className={`rounded-full px-2 py-0.5 text-xs font-medium ${
-                          container.status === "Active"
+                        className={`rounded-full px-2 py-0.5 text-xs font-medium ${container.status === "Active"
                             ? "bg-success/10 text-success"
                             : container.status === "Alert"
                               ? "bg-destructive/10 text-destructive"
                               : "bg-warning/10 text-warning"
-                        }`}
+                          }`}
                       >
                         {container.status}
                       </span>
@@ -229,7 +224,7 @@ export function ContainerTable() {
                       </td>
                     </tr>
                   )}
-                </>
+                </React.Fragment>
               );
             })}
           </tbody>
